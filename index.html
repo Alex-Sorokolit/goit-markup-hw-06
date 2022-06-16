@@ -502,7 +502,10 @@
     <!-- Modal window_________________________________________ -->
 
     <!-- Background -->
-    <div class="backdrop is-hidden" data-modal>
+
+    <!-- Щоб зафіксувати модальне вікно відкритим -->
+    <div class="backdrop" data-modal>
+      <!-- <div class="backdrop is-hidden" data-modal> -->
       <!-- Modal -->
       <div class="modal">
         <button class="close-button button" data-modal-close>
@@ -511,6 +514,70 @@
           </svg>
           <!-- close -->
         </button>
+        <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form>
+          <label for="user-name" class="input-label">Имя</label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              id="user-name"
+              placeholder=" "
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./images/icons/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+
+          <label for="user-phone" class="input-label">Телефон</label>
+          <div class="input-wrap">
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-phone"
+              id="user-phone"
+              placeholder=" "
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./images/icons/icons.svg#icon-user-phone"></use>
+            </svg>
+          </div>
+
+          <label for="user-email" class="input-label">Почта</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              class="modal-input"
+              name="user-email"
+              id="user-email"
+              placeholder=" "
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./images/icons/icons.svg#icon-user-email"></use>
+            </svg>
+          </div>
+
+          <label for="user-text" class="input-label">Комментарий</label>
+          <textarea
+            class="user-text"
+            name="user-text"
+            id="user-text"
+            placeholder="Введите текст"
+          ></textarea>
+
+          <div class="checkbox-wrap">
+            <input type="checkbox" class="privacy-checkbox" name="privacy" id="privacy" />
+            <label for="privacy" class="privacy-text">
+              Соглашаюсь с рассылкой и принимаю
+              <a href="#" class="privacy-link" target="_blank" rel="noopener noreferrer"
+                >Условия договора</a
+              >
+            </label>
+          </div>
+
+          <button type="submit" class="submit-button">Отправить</button>
+        </form>
       </div>
     </div>
 
@@ -546,7 +613,7 @@
         </div>
         <div class="social-column">
           <h2 class="title">присоединяйтесь</h2>
-          <!-- <div class="social"> -->
+
           <ul class="social-list list">
             <li class="item">
               <a
@@ -600,7 +667,20 @@
               </a>
             </li>
           </ul>
-          <!-- </div> -->
+        </div>
+        <div class="form-column">
+          <p class="text">Подпишитесь на рассылку</p>
+          <form class="form">
+            <label for="email">
+              <input type="email" class="email" id="email" placeholder="E-mail" name="email" />
+            </label>
+            <button type="submit" class="submit-button">
+              Подписаться
+              <svg class="submit-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
