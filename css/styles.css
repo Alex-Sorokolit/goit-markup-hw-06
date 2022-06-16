@@ -252,11 +252,38 @@ p {
 .checkbox-wrap {
   margin-bottom: 30px;
 }
+
 .privacy-text {
+  display: flex;
+  align-items: center;
+
   font-size: 14px;
   line-height: 1.7142;
   letter-spacing: 0.03em;
   color: var(--text-gray);
+}
+.privacy-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--text-dark-gray);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+}
+
+.privacy-checkbox:checked + .privacy-text span {
+  background-color: var(--accent);
+  /* border: 2px solid transparent; */
+  border: none;
+}
+
+.check-icon {
+  fill: transparent;
+}
+.privacy-checkbox:checked + .privacy-text .check-icon {
+  fill: var(--background-white);
 }
 
 .privacy-link {
