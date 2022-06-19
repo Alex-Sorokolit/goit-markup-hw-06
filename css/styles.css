@@ -167,15 +167,13 @@ p {
   justify-content: center;
   align-items: center;
 
-  fill: var(--text-black);
   background: var(--background-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0), 0px 1px 1px rgba(0, 0, 0, 0),
     0px 2px 1px rgba(0, 0, 0, 0);
 
-  transition: box-shadow var(--time-animatio) var(--cubic-bezier),
-    fill var(--time-animatio) var(--cubic-bezier);
+  transition: box-shadow var(--time-animatio) var(--cubic-bezier);
 }
 
 .close-button:hover,
@@ -238,7 +236,6 @@ p {
   transition: fill var(--time-animatio) var(--cubic-bezier);
 }
 
-.modal-input:hover + .input-icon,
 .modal-input:focus + .input-icon {
   fill: var(--accent);
 }
@@ -252,12 +249,6 @@ p {
   resize: none;
   padding: 16px 12px;
   margin-bottom: 20px;
-
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-
   transition: border var(--time-animatio) var(--cubic-bezier);
 }
 
@@ -276,13 +267,11 @@ p {
   justify-content: center;
 
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.7142;
   letter-spacing: 0.03em;
   color: var(--text-gray);
-
-  cursor: pointer;
 }
-.custom-checkbox {
+.privacy-text span {
   width: 16px;
   height: 15px;
   border: 2px solid var(--text-dark-gray);
@@ -294,15 +283,15 @@ p {
   transition: border var(--time-animatio) var(--cubic-bezier);
 }
 
-.privacy-text:hover .custom-checkbox {
-  border: 2px solid var(--accent);
+.privacy-text:hover span {
+  border: 1px solid var(--accent);
 }
 
-.privacy-checkbox:focus + .privacy-text .custom-checkbox {
-  border: 2px solid var(--accent);
+.privacy-checkbox:focus + .privacy-text span {
+  border: 1px solid var(--accent);
 }
 
-.privacy-checkbox:checked + .privacy-text .custom-checkbox {
+.privacy-checkbox:checked + .privacy-text span {
   background-color: var(--accent);
   /* border: 2px solid transparent; */
   border: none;
