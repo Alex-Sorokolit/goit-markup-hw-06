@@ -311,14 +311,12 @@ p {
   border: none;
 }
 
-
+.privacy-checkbox:checked + .privacy-text .check-icon {
+  fill: var(--background-white);
+}
 
 .check-icon {
   fill: transparent;
-}
-
-.privacy-checkbox:checked + .privacy-text .check-icon {
-  fill: var(--background-white);
 }
 
 .privacy-link {
